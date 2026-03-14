@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Async Weather Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>⛅ Async Weather Tracker</h1>
+    <p>// event loop · async/await · fetch api · local storage</p>
+  </header>
+
+  <div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+
+      <!-- Search Panel -->
+      <div class="panel">
+        <div class="panel-title">Search City</div>
+        <div class="search-wrap">
+          <input type="text" id="cityInput" placeholder="e.g. Delhi, London, Tokyo" autocomplete="off" />
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+
+      <!-- History Panel -->
+      <div class="panel">
+        <div class="panel-title">Search History</div>
+        <div id="historyList">
+          <span class="placeholder-msg" style="padding:0; font-size:0.75rem;">No recent searches</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN — Weather Info -->
+    <div class="panel" id="weatherPanel">
+      <div class="panel-title">Weather Info</div>
+      <div id="weatherOutput">
+        <div class="placeholder-msg">
+          Enter a city name<br/>and press Search<br/>to fetch weather data
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSOLE PANEL — full width -->
+    <div class="panel console-panel">
+      <div class="panel-title">Console — Event Loop</div>
+      <div id="consoleOutput">
+        <div class="log-line log-sync">
+          <div class="log-dot"></div>
+          <div class="log-text">// Ready. Event loop analysis will appear here.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
